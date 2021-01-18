@@ -1,2 +1,40 @@
 body {
 }
+
+.grid-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 0.4fr;
+  grid-template-areas:
+    "main main main"
+    "content1 content2 content3"
+    "footer footer footer";
+  grid-gap: 10px;
+  text-align: center;
+}
+
+main {
+  grid-area: main;
+  background-color: #ccc;
+}
+
+.content1 {
+  grid-area: content1;
+  background-color: #ccc;
+}
+
+.content2 {
+  grid-area: content2;
+  background-color: #ccc;
+}
+
+.content3 {
+  grid-area: content3;
+  background-color: #ccc;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #ccc;
+}
