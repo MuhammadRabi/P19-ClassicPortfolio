@@ -207,7 +207,8 @@ section {
   transition: 0.4s ease-in-out;
 }
 
-.sidebar ul li a:hover {
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
   color: var(--btn-clr);
 }
 
@@ -386,3 +387,25 @@ textarea {
 }
 
 /* end contact us section */
+
+/* scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.show-scroll {
+  display: block;
+}
+.scroll-to-top i {
+  font-size: 38px;
+  color: #333;
+  opacity: 0.7;
+}
+
+.scroll-to-top:hover i {
+  opacity: 1;
+}
