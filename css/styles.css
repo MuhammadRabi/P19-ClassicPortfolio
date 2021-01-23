@@ -113,7 +113,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 100px;
+  padding: 50px;
 }
 
 .hero-text h1 {
@@ -157,7 +157,7 @@ section {
 .social-icons {
   position: absolute;
   bottom: 25px;
-  left: 100px;
+  left: 40px;
   margin: 25px 0;
 }
 
@@ -408,4 +408,42 @@ textarea {
 
 .scroll-to-top:hover i {
   opacity: 1;
+}
+
+/* responsive */
+
+@media (max-width: 991px) {
+  .main-text {
+    width: 80%;
+  }
+  .main-pic {
+    display: none;
+  }
+
+  .hero-text,
+  .sidebar {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .social-icons {
+    bottom: 0px;
+    left: 10px;
+    margin: 0;
+  }
+  .about-us img {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-text {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 567px) {
+  h1 {
+    font-size: 36px;
+  }
 }
