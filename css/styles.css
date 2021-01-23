@@ -48,8 +48,8 @@ a:hover {
 }
 
 section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 75px;
+  padding-bottom: 75px;
   min-height: 100vh;
 }
 
@@ -384,10 +384,27 @@ textarea {
   display: block;
   max-width: 180px;
   margin: auto;
+  transition: 0.5s ease-in-out;
 }
 
+.contact-us button:hover {
+  opacity: 0.8;
+}
 /* end contact us section */
 
+/* start footer */
+
+footer {
+  background-color: #0f0f0f;
+}
+
+footer p {
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+  text-transform: capitalize;
+  color: var(--light-fg-clr);
+}
 /* scroll to top button */
 .scroll-to-top {
   position: fixed;
@@ -433,6 +450,14 @@ textarea {
   }
   .about-us img {
     margin-top: 25px;
+  }
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  input {
+    width: 96%;
   }
 }
 
