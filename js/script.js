@@ -41,6 +41,8 @@ function scrollToSection(element) {
         activeLink.classList.remove("active");
       });
       anchor.classList.add("active");
+      sideBar.classList.remove("active");
+      menuToggle.classList.remove("active");
       const section = document.querySelector(e.target.dataset.link).offsetTop;
       window.scrollTo({
         top: section,
