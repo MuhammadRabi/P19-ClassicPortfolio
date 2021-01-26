@@ -424,6 +424,7 @@ textarea {
   border: transparent;
   padding: 5px 10px;
   margin: 5px;
+  outline: none;
   text-transform: capitalize;
   color: #fff;
 }
