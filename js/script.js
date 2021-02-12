@@ -52,5 +52,4 @@ function scrollToSection(element) {
     });
   });
 }
-
 scrollToSection(links);
