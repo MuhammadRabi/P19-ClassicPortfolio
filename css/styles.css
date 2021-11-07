@@ -158,8 +158,8 @@ section {
 
 .hero-text p {
   padding-right: 35px;
-  line-height: 1.4;
-  margin-bottom: 25px;
+  line-height: 1.8;
+  margin: 25px 0;
 }
 
 .hero-text a {
@@ -174,9 +174,9 @@ section {
 }
 
 .social-icons {
-  position: absolute;
-  bottom: 25px;
-  left: 40px;
+  position: relative;
+  bottom: 15px;
+  left: 0;
   margin: 25px 0;
 }
 
