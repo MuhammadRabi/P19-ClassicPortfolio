@@ -14,14 +14,14 @@
 }
 
 :root {
-  --main-fg-clr: #010101;
+  --main-fg-clr: #1b1b1b;
   --light-fg-clr: #bebaba;
   --second-fg-clr: #333;
   --main-bg-clr: #fff;
   --btn-clr: #00bcd4;
 }
 
-.img-container {
+.img-fluid {
   max-width: 100%;
   height: auto;
 }
@@ -57,7 +57,6 @@ a:hover {
 section {
   padding-top: 75px;
   padding-bottom: 75px;
-  min-height: 100vh;
 }
 
 /* global rules */
@@ -315,6 +314,7 @@ section {
 .card {
   background-color: #f8f8f8;
   padding: 25px;
+  position: relative;
   margin-bottom: 15px;
   text-align: center;
   cursor: pointer;
@@ -323,9 +323,38 @@ section {
   transition: 0.5s ease-in-out;
 }
 
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 4px;
+  background-color: var(--btn-clr);
+  transition: 1s ease-in-out;
+}
+
+.card:before {
+  left: 0;
+  top: 0;
+}
+.card:after {
+  right: 0;
+  bottom: 0;
+}
 .card:hover {
   color: var(--light-fg-clr);
   background-color: var(--main-fg-clr);
+}
+.card:hover h3 {
+  color: var(--btn-clr);
+}
+
+.card:hover:before {
+  height: 100%;
+}
+
+.card:hover:after {
+  height: 100%;
 }
 
 .card img {
@@ -342,6 +371,7 @@ section {
 
 .card h3 {
   text-transform: capitalize;
+  margin: 10px 0 25px;
 }
 
 /* end services section */
@@ -359,6 +389,26 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.recent-works .img-box .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recent-works .img-box a {
+  width: fit-content;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 2px solid vaR(--btn-clr);
+  text-transform: capitalize;
+  transition: 0.5s ease-in-out;
+}
+
+.recent-works .img-box a:hover {
+  background-color: var(--btn-clr);
 }
 
 .overlay {
@@ -470,7 +520,7 @@ footer p {
 }
 .scroll-to-top i {
   font-size: 38px;
-  color: #333;
+  color: var(--btn-clr);
   opacity: 0.7;
 }
 
