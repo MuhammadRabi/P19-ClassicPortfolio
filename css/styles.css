@@ -311,6 +311,12 @@ section {
   z-index: 99;
 }*/
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
 .card {
   background-color: #f8f8f8;
   padding: 25px;
@@ -377,27 +383,41 @@ section {
 /* end services section */
 
 /* start recent works section */
+
+.recent-works .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  gap: 25px;
+}
+
 .recent-works h2 {
   position: relative;
   color: var(--btn-clr);
 }
 
-.recent-works .img-box {
-  margin-bottom: 15px;
+.recent-works .product-box {
   position: relative;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  border-radius: 5px;
+  min-height: 250px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
 }
-
-.recent-works .img-box .overlay {
+.recent-works .product-box .overlay {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
-.recent-works .img-box a {
+.product-box i {
+  font-size: 72px;
+  color: var(--btn-clr);
+}
+
+.recent-works .product-box a {
   width: fit-content;
   display: block;
   padding: 10px 15px;
@@ -407,7 +427,7 @@ section {
   transition: 0.5s ease-in-out;
 }
 
-.recent-works .img-box a:hover {
+.recent-works .product-box a:hover {
   background-color: var(--btn-clr);
 }
 
@@ -427,23 +447,8 @@ section {
   opacity: 0;
 }
 
-.recent-works .img-box img {
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.recent-works .img-box:hover .overlay {
+.recent-works .product-box:hover .overlay {
   opacity: 1;
-}
-
-.img-box p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-transform: capitalize;
 }
 
 /* end recent works section */
