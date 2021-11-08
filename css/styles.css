@@ -328,7 +328,7 @@ section {
   content: "";
   position: absolute;
   height: 0;
-  width: 4px;
+  width: 5px;
   background-color: var(--btn-clr);
   transition: 1s ease-in-out;
 }
@@ -402,7 +402,7 @@ section {
   display: block;
   padding: 10px 15px;
   border-radius: 15px;
-  border: 2px solid vaR(--btn-clr);
+  border: 3px solid vaR(--btn-clr);
   text-transform: capitalize;
   transition: 0.5s ease-in-out;
 }
@@ -483,6 +483,7 @@ textarea {
   display: block;
   max-width: 180px;
   margin: auto;
+  border-radius: 3px;
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
