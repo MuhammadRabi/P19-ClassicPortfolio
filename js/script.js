@@ -1,3 +1,6 @@
+// initialize aos
+AOS.init();
+
 // closing side menu
 const menuToggle = document.querySelector(".menu-toggle");
 const sideBar = document.querySelector(".sidebar");
