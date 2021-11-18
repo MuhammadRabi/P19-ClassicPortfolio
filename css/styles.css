@@ -607,3 +607,74 @@ footer p {
 }
 
 /* ========= end =========== */
+
+/* ==== Start FAQ Accordion ==== */
+
+.faq {
+  background-color: var(--second-fg-clr);
+}
+
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  gap: 20px;
+}
+.accordion-item {
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  height: fit-content;
+}
+.accordion-header {
+  padding: 15px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid transparent;
+}
+.accordion-header:after {
+  content: "+";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+}
+.accordion-header.show {
+  color: var(--btn-clr);
+  border: 3px solid var(--btn-clr);
+  /*background-color: #ccc;*/
+  font-weight: 600;
+}
+.accordion-header.show:after {
+  content: "-";
+}
+
+.accordion-body {
+  margin: 0;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-body p {
+  padding: 1px 20px 25px;
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+/* ==== Start Platform Section === */
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 60px;
+}
+.platform-grid img {
+  margin: auto;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 0.5s ease-in-out;
+}
+.platform-grid img:hover {
+  margin: auto;
+  filter: grayscale(0);
+}

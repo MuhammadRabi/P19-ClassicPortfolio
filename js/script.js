@@ -56,3 +56,28 @@ function scrollToSection(element) {
   });
 }
 scrollToSection(links);
+
+// accordion logic
+
+let accordionHeaders = document.querySelectorAll(".accordion-header");
+
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    let activeHeader = document.querySelector(".accordion-header.show");
+    if (activeHeader && activeHeader !== header) {
+      activeHeader.classList.toggle("show");
+      activeHeader.nextElementSibling.style.maxHeight = "0";
+    }
+
+    // opening the body of accordion
+    let accordionBody = header.nextElementSibling;
+    header.classList.toggle("show");
+    if (header.classList.contains("show")) {
+      accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+    } else {
+      accordionBody.style.maxHeight = "0";
+    }
+  });
+});
+
+console.log(accordionHeaders);
