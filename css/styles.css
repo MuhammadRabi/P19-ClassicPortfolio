@@ -41,6 +41,7 @@ a:hover {
   display: block;
   width: 50px;
   left: 50%;
+  padding: 5px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   text-align: center;
@@ -50,6 +51,7 @@ a:hover {
   content: "";
   position: absolute;
   display: block;
+  padding: 5px;
   width: 50px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -169,16 +171,13 @@ section {
   margin: 0;
   font-size: 22px;
 }
-
+.hero-text p {
+  line-height: 1.8;
+}
 .hero-text span {
   color: var(--btn-clr);
   font-size: 23px;
   font-weight: 900;
-}
-.hero-text p {
-  padding-right: 35px;
-  line-height: 1.8;
-  margin: 25px 0;
 }
 
 .hero-text a {
@@ -402,6 +401,10 @@ section {
   background-color: var(--second-fg-clr);
 }
 
+.faq .main-text {
+  color: #fff;
+}
+
 .accordion {
   display: -ms-grid;
   display: grid;
@@ -415,7 +418,7 @@ section {
   margin-bottom: 20px;
 }
 
-@media (max-width: 567px) {
+@media screen and (max-width: 567px) {
   .accordion {
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   }
@@ -462,11 +465,16 @@ section {
 
 /* ==== Start Platform Section === */
 
+.platform .main-text {
+  color: var(--btn-clr);
+}
+
 .platform-grid {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   gap: 30px;
+  margin-top: 50px;
 }
 .platform-grid img {
   margin: auto;
@@ -636,7 +644,7 @@ textarea {
 /* start footer */
 
 footer {
-  background-color: #0f0f0f;
+  background-color: var(--second-fg-clr);
 }
 
 footer p {
@@ -670,7 +678,7 @@ footer p {
 
 /* responsive */
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .main-text {
     width: 80%;
   }
@@ -702,18 +710,40 @@ footer p {
   }
 }
 /* and */
-@media (min-width: 568px) and (max-width: 1200px) {
+@media screen and (min-width: 568px) and (max-width: 1200px) {
   .hero-text {
     padding: 25px;
   }
+  .hero-text p {
+    padding-right: 35px;
+    margin: 25px 0;
+  }
 }
-@media (max-width: 567px) {
+@media screen and (max-width: 567px) {
   .hero-text {
     padding: 150px 15px;
   }
   .hero-text h1 {
-    font-size: 36px;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .hero-text p {
+    padding-right: 0;
+    font-size: 14px;
+    margin-bottom: 15px;
   }
 }
 
 /* ========= end =========== */
+
+@media screen and (orientation: landscape) {
+  .hero-text h1 {
+    margin-top: -10px;
+  }
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+  border: 0;
+}
