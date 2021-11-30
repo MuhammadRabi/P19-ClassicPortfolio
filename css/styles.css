@@ -125,7 +125,7 @@ section {
   height: 50px;
   -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
-  z-index: 999;
+  z-index: 1001;
   cursor: pointer;
 }
 
@@ -136,9 +136,12 @@ section {
   background-repeat: no-repeat;
 }
 
+.hero-text {
+  z-index: 9;
+  position: absolute;
+}
 .hero-text,
 .sidebar {
-  position: absolute;
   top: 0;
   right: 0;
   height: 100%;
@@ -154,6 +157,25 @@ section {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 50px;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 1001;
+}
+
+.sidebar-overlay-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: none;
+}
+.sidebar-overlay-layer.active {
+  display: block;
 }
 
 .hero-text h1 {
