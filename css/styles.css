@@ -5,6 +5,10 @@
 * Browsers: last 2 version
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
