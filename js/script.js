@@ -74,6 +74,7 @@ window.addEventListener("scroll", () => {
       navLinks.forEach((link) => {
         link.classList.remove("active");
         document.querySelector(`nav li a[href*=${id}]`).classList.add("active");
+        sideBarOverlay.classList.remove("active");
       });
     }
   });
