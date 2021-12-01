@@ -1,15 +1,23 @@
 // initialize aos
 AOS.init();
 
-// closing sidebar
+// sidebar
 const menuToggle = document.querySelector(".menu-toggle");
 const sideBar = document.querySelector(".sidebar");
 const sideBarOverlay = document.querySelector(".sidebar-overlay-layer");
+const sidebarLinks = document.querySelectorAll(".sidebar li a");
 
-menuToggle.addEventListener("click", () => {
+// closing sidebar by menu toggle button
+menuToggle.addEventListener("click", closeSidebar);
+function closeSidebar() {
   menuToggle.classList.toggle("active");
   sideBar.classList.toggle("active");
   sideBarOverlay.classList.toggle("active");
+}
+
+// closing sidebar by navigation links
+sidebarLinks.forEach((link) => {
+  link.addEventListener("click", closeSidebar);
 });
 
 // scroll to top button
@@ -50,7 +58,6 @@ window.addEventListener("scroll", () => {
       navLinks.forEach((link) => {
         link.classList.remove("active");
         document.querySelector(`nav li a[href*=${id}]`).classList.add("active");
-        sideBarOverlay.classList.remove("active");
       });
     }
   });
